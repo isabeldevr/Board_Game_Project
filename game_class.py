@@ -87,7 +87,7 @@ class MancalaGame:
             if os.path.isfile(file_path):
                 os.remove(file_path)
 
-
+                
     def initialise_board_ui(self):
         """ We initialise the state of the board's user interface
         Input: None
@@ -109,7 +109,7 @@ class MancalaGame:
         return leaderboard_ui.show_leaderboard_options(final_points, game_over, self.username)
 
 
-    def keyboard_command(self, key) -> None:
+      def keyboard_command(self, key) -> None:
         """ Handle quitting and re-start of game
         Input: key pressed
         Output: None. Calls the start or quit method
@@ -230,7 +230,6 @@ class MancalaGame:
                 return self.current_player_update(last_row, last_col)
             else:
                 return self.board_update(self.board_dictionary)
-
         except Exception as e:
             print(f"An error occurred: {e}", traceback.format_exc())
 
@@ -280,7 +279,6 @@ class MancalaGame:
             if total_score > best_score:
                 best_score = total_score
                 best_move = move
-
         return best_move
 
 
@@ -293,6 +291,7 @@ class MancalaGame:
         for col in range(6):
             values.append((player_to_evaluate, col))
         return values
+
 
     def evaluate_move(self, root, player_to_evaluate, move, depth) -> int:
         """ This method evaluates the move
@@ -345,7 +344,7 @@ class MancalaGame:
 
         return points
 
-
+      
     def stone_capture(self, start_row: int, start_col: int, last_row: int, last_col: int, dictionary: dict) -> None:
         """ Checks if we can capture stones by checking if we land in an empty pit on our side
         Input: starting row, starting column, last row, last column, dictionary
@@ -402,9 +401,3 @@ class MancalaGame:
         if player == 2: self.board.print(f"{self.username} wins!\n{final_message}")
         else: self.board.print(f"The Bot wins!\n{final_message}")
         return None
-
-
-# SOME NOTES
-# The time complexities for stone
-# Handle draws
-# 6. We need to add the stone images to the board (so layer the stones instead of the numbers)

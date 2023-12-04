@@ -103,6 +103,7 @@ class LeaderboardUI:
             leaderboard_text = "No records yet! Play a game to add a record."
         easygui.msgbox(leaderboard_text, "Leaderboard")
 
+        
     def submit_score(self, points, name) -> None:
         """ Submit the score to the leaderboard
         Input: points (int) - the number of points the player has
@@ -120,6 +121,7 @@ class LeaderboardUI:
         Time Complexity: O(1)"""
         easygui.msgbox("Goodbye! :)")
         quit()
+
 
     def show_leaderboard_options(self, points, game_over, name) -> None:
         """ Show options for the leaderboard
