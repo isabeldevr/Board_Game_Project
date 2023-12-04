@@ -109,7 +109,7 @@ class MancalaGame:
         return leaderboard_ui.show_leaderboard_options(final_points, game_over, self.username)
 
 
-      def keyboard_command(self, key) -> None:
+    def keyboard_command(self, key) -> None:
         """ Handle quitting and re-start of game
         Input: key pressed
         Output: None. Calls the start or quit method
