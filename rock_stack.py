@@ -1,6 +1,6 @@
 import os
 import random
-from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+from PIL import Image, ImageDraw, ImageFont
 
 
 rock_components_path = "img/rocks/base"
@@ -9,7 +9,7 @@ canvas_height = 110
 rocks_file_list = []
 for filename in os.listdir(rock_components_path):
     if os.path.isfile(os.path.join(rock_components_path, filename)):
-        rocks_file_list.append(f"{rock_components_path}\\{filename}")
+        rocks_file_list.append(f"{rock_components_path}/{filename}")
 pass
 
 def stack_number_on_image(image, number):
