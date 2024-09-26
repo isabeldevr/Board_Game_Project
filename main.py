@@ -1,4 +1,5 @@
 from game_class import MancalaGame
+
 def main():
     game = MancalaGame()
     game.start()
